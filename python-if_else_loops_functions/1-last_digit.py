@@ -12,4 +12,4 @@ elif (ld == 0):
 elif (ld < 6):
     end = "and is less than 6 and not 0"
 
-print(f'The last digit of {number} is {ld} {end}')
+print(f'Last digit of {number} is {ld} {end}')
