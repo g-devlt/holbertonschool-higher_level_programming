@@ -3,6 +3,8 @@ import random
 number = random.randint(-10000, 10000)
 
 ld = number % 10
+if(number < 0):
+    ld -= 10
 end = ""
 
 if (ld > 5):
