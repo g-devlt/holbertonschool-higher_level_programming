@@ -10,7 +10,7 @@ end = ""
 if (ld > 5):
     end = "and is greater than 5"
 elif (ld == 0):
-    end = "and is zero"
+    end = "and is 0"
 elif (ld < 6):
     end = "and is less than 6 and not 0"
 
