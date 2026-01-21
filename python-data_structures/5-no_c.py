@@ -6,5 +6,6 @@ def no_c(my_string):
             s += c
     return s
 
+
 if __name__ == "__main__":
     print(no_c("CBest School"))
