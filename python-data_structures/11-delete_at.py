@@ -6,3 +6,4 @@ def delete_at(my_list=[], idx=0):
     for i, x in enumerate(my_list):
         if(idx != i)
             out.append(x)
+    return out
