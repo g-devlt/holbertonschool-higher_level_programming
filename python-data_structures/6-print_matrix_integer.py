@@ -2,7 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         for (id, j) in enumerate(i):
-            if(id > 0):
+            if id > 0:
                 print(" ", end="")
             print("{:d}".format(j), end="")
         print("")
