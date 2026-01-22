@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    if(my_list is None):
+    if my_list is None:
         return
     return [element if idx == i else x for (i, x) in enumerate(my_list.copy())]
 
