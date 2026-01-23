@@ -3,23 +3,22 @@ def one(s: str, i):
     if i >= len(s) or i < 0:
         return 0
     c = s[i]
-    match c:
-        case 'I':
-            return 1
-        case 'V':
-            return 5
-        case 'X':
-            return 10
-        case 'L':
-            return 50
-        case 'C':
-            return 100
-        case 'D':
-            return 500
-        case 'M':
-            return 1000
-        case _:
-            return 0
+    if c == 'I':
+        return 1
+    elif c == 'V':
+        return 5
+    elif c == 'X':
+        return 10
+    elif c == 'L':
+        return 50
+    elif c == 'C':
+        return 100
+    elif c == 'D':
+        return 500
+    elif c == 'M':
+        return 1000
+    else:
+        return 0
 
 
 def roman_to_int(roman_string):
