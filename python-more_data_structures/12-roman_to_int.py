@@ -3,7 +3,7 @@ def one(s: str, i):
     if i >= len(s) or i < 0:
         return 0
     c = s[i]
-    match c[0]:
+    match c:
         case 'I':
             return 1
         case 'V':
