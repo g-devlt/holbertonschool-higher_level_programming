@@ -22,6 +22,8 @@ def one(s: str, i):
 
 
 def roman_to_int(roman_string):
+    if(not isinstance(roman_string, str)):
+        return 0
     res = 0
     i = 0
     while i < len(roman_string):
@@ -45,3 +47,5 @@ if __name__ == "__main__":
     print(roman_to_int("IX"))
     print(roman_to_int("LXXXVII"))
     print(roman_to_int("DCCVII"))
+    print(roman_to_int(None))
+    print(roman_to_int(10))
