@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+def update_dictionary(a_dictionary, key, value):
+    a_dictionary.update({key: value})
+    return a_dictionary
+
+
+if __name__ == "__main__":
+    a = {"a":10, "b": 20}
+    print(a)
+    update_dictionary(a, "c", 30)
+    print(a)
+    update_dictionary(a, "c", 35)
+    print(a)
