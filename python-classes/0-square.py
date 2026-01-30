@@ -2,6 +2,7 @@
 """A simple module for a basic Square class
 """
 
+
 class Square:
     """A basic Square class
     """
