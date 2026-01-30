@@ -2,6 +2,7 @@
 """A simple module for a basic Rectangle class
 """
 
+
 class Rectangle:
     """A basic Rectangle class
     """
