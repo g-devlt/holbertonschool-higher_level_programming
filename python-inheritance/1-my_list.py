@@ -1,5 +1,5 @@
-"""A simple module for a sorting list.
-"""
+"""A simple module for a sorting list."""
+
 
 class MyList(list):
     """A class that inherits from list.
