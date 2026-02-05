@@ -7,7 +7,7 @@ class MyList(list):
     """
 
     def print_sorted(self):
-        """A function that allows to print a sorted version of this Object"""
+        """A function that prints a sorted version of this Object"""
         print(sorted(self))
 
 
@@ -17,4 +17,6 @@ if __name__ == "__main__":
     mylist.append(3)
     mylist.append(99)
     mylist.append(1)
+    print(mylist)
     mylist.print_sorted()
+    print(mylist)
