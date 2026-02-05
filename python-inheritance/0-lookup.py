@@ -9,4 +9,4 @@ def lookup(obj):
 
 
 if __name__ == "__main__":
-    print(lookup(Base()))
+    print(lookup(lookup))
