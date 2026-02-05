@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Base module for a lookup function.
 """
 
