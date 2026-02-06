@@ -1,0 +1,16 @@
+Test 1:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.validate_integer("test1", 1)
+
+Test 2:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.validate_integer("test2", 0)
+ValueError: test2 must be greater than 0
+
+Test 3:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.validate_integer("test3", -1)
+ValueError: test3 must be greater than 0
