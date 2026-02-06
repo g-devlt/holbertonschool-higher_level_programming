@@ -7,7 +7,7 @@ class BaseGeometry():
     """BaseGeometry class
     A class to handle geometry
     """
-    
+
     def area(self):
         """Returns or prints the area of the object
         """
