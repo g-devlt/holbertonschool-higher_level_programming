@@ -1,4 +1,5 @@
 Test 1:
+>>> MyList = __import__('1-mylist').MyList
 >>> mylist = MyList()
 >>> mylist.append(2)
 >>> mylist.append(1)
@@ -8,6 +9,7 @@ Test 1:
 [1, 2, 3, 99]
 
 Test 2:
+>>> MyList = __import__('1-mylist').MyList
 >>> mylist = MyList()
 >>> mylist.append(3)
 >>> mylist.append(1)
@@ -19,6 +21,7 @@ Test 2:
 [1, 1, 2, 2, 3, 3]
 
 Test 3:
+>>> MyList = __import__('1-mylist').MyList
 >>> mylist = MyList()
 >>> mylist.print_sorted()
 []
