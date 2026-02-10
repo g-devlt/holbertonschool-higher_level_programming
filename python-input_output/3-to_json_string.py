@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A module holding IO utilities,
-This files holds append_write(filename, text)
+This files holds to_json_string(my_obj)
 """
 
 import json
