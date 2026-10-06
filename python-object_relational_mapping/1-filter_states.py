@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and retrieves all 
-states from the 'states' table,
+A script that lists all states with
+a name starting with N (upper N)
+from the database hbtn_0e_0_usa
 """
 
 if __name__ == "__main__":
@@ -27,8 +28,9 @@ if __name__ == "__main__":
             db=database_name
         )
         cursor = db.cursor()
-
-        cursor.execute("SELECT * FROM states ORDER BY id ASC")
+        cursor.execute(
+            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+        )
 
         states = cursor.fetchall()
         for state in states:
