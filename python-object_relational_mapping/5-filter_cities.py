@@ -45,7 +45,7 @@ if __name__ == "__main__":
         for x in range(len(cities)):
             if(x):
                 print(", ", end="")
-            print(cities[x]["name"], end="")
+            print(cities[x][1], end="")
         print()
 
     except MySQLdb.Error as e:
