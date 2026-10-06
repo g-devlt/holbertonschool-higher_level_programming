@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
         cities = cursor.fetchall()
         for x in range(len(cities)):
-            if(x):
+            if (x):
                 print(", ", end="")
             print(cities[x][1], end="")
         print()
