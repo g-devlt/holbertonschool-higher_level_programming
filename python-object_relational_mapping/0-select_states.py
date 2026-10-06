@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and retrieves all states from the 'states' table,
+This script connects to a MySQL database and retrieves all
+states from the 'states' table,
 """
 
 if __name__ == "__main__":
@@ -9,7 +10,10 @@ if __name__ == "__main__":
 
     # Check if the correct number of arguments is provided
     if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database_name>".format(sys.argv[0]))
+        print(
+            "Usage: {} <username> <password> <database_name>"
+            .format(sys.argv[0])
+        )
         sys.exit(1)
 
     username = sys.argv[1]
@@ -18,7 +22,12 @@ if __name__ == "__main__":
 
     try:
         # Connect to the MySQL database
-        db = MySQLdb.connect(host="localhost", user=username, passwd=password, db=database_name)
+        db = MySQLdb.connect(
+            host="localhost",
+            user=username,
+            passwd=password,
+            db=database_name
+        )
         cursor = db.cursor()
 
         # Execute the SQL query to retrieve all states
