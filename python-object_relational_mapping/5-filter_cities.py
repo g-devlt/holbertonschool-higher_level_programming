@@ -46,6 +46,7 @@ if __name__ == "__main__":
             if(x):
                 print(", ", end="")
             print(cities[x]["name"], end="")
+        print()
 
     except MySQLdb.Error as e:
         print("Error connecting to MySQL: {}".format(e))
