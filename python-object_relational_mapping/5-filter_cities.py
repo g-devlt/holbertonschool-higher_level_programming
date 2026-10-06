@@ -42,8 +42,10 @@ if __name__ == "__main__":
         )
 
         cities = cursor.fetchall()
-        for city in cities:
-            print(city)
+        for x in range(len(cities)):
+            if(x):
+                print(", ", end="")
+            print(cities[x]["name"], end="")
 
     except MySQLdb.Error as e:
         print("Error connecting to MySQL: {}".format(e))
