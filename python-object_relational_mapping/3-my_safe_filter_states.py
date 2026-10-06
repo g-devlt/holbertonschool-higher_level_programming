@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-A script that takes in an argument and
-displays all values in the states table
-of hbtn_0e_0_usa where name matches the argument.
+A script that takes in arguments and displays all values
+in the states table of hbtn_0e_0_usa where name matches
+the argument. But this time, one that is safe from
+MySQL injections!
 """
 
 if __name__ == "__main__":
@@ -29,12 +30,13 @@ if __name__ == "__main__":
             db=database_name
         )
         cursor = db.cursor()
+        # Use of query parameters
         cursor.execute(
             """
             SELECT * FROM states
-                WHERE BINARY name={s}
+                WHERE BINARY name=%s
             ORDER BY id ASC
-            """.format(s = state_name)
+            """, (state_name,)
         )
 
         states = cursor.fetchall()
