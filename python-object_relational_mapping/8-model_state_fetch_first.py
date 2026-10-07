@@ -29,9 +29,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = session.query(State)
-    first_state = first_state.order_by(asc(State.id))
-    first_state = first_state.first()
+    first_state = (
+        session.query(State)
+        .order_by(asc(State.id))
+        .first()
+    )
 
     if first_state:
         print(f"{first_state.id}: {first_state.name}")
