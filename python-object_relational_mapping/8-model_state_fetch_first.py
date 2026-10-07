@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+"""
+Write a script that prints the first
+State object from the database
+"""
+
+if __name__ == "__main__":
+    from sqlalchemy import create_engine, asc
+    from sqlalchemy.orm import sessionmaker
+    from model_state import Base, State
+    import sys
+
+    if len(sys.argv) != 4:
+        print(
+            "Usage: {} <username> <password> <database>"
+            .format(sys.argv[0])
+            )
+        sys.exit(1)
+
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'
+        .format(username, password, database)
+    )
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    first_state = session.query(State)
+    first_state = first_state.order_by(asc(State.id))
+    first_state = first_state.first()
+
+    if first_state:
+        print(f"{first_state.id}: {first_state.name}")
+    else:
+        print("Nothing")
+
+    session.close()
