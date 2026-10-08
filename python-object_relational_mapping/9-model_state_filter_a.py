@@ -4,12 +4,13 @@ A script that lists all State objects that
 contain the letter a from the database hbtn_0e_6_usa
 """
 
-if __name__ == "__main__":
-    from sqlalchemy import create_engine, asc
-    from sqlalchemy.orm import sessionmaker
-    from model_state import Base, State
-    import sys
+from sqlalchemy import create_engine, asc
+from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
+import sys
 
+
+if __name__ == "__main__":
     if len(sys.argv) != 4:
         print(
             "Usage: {} <username> <password> <database>"
@@ -29,10 +30,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    res = (session.query(State)
-            .filter(State.name.like('%a%'))
-            .order_by(asc(State.id))
-            .all()
+    res = (
+        session.query(State)
+        .filter(State.name.like('%a%'))
+        .order_by(asc(State.id))
+        .all()
     )
 
     for state in res:

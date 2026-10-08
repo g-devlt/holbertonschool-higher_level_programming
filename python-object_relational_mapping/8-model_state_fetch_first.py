@@ -3,13 +3,12 @@
 Write a script that prints the first
 State object from the database
 """
+from sqlalchemy import create_engine, asc
+from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
+import sys
 
 if __name__ == "__main__":
-    from sqlalchemy import create_engine, asc
-    from sqlalchemy.orm import sessionmaker
-    from model_state import Base, State
-    import sys
-
     if len(sys.argv) != 4:
         print(
             "Usage: {} <username> <password> <database>"
@@ -29,9 +28,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = (session.query(State)
-                    .order_by(asc(State.id))
-                    .first()
+    first_state = (
+        session.query(State)
+        .order_by(asc(State.id))
+        .first()
     )
 
     if first_state:

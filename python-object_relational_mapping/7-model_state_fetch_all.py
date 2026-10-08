@@ -2,12 +2,13 @@
 """
 A script that fetches all State objects from the database
 """
+from sqlalchemy import create_engine, asc
+from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
+import sys
+
 
 if __name__ == "__main__":
-    from sqlalchemy import create_engine, asc
-    from sqlalchemy.orm import sessionmaker
-    from model_state import Base, State
-    import sys
 
     if len(sys.argv) != 4:
         print(
