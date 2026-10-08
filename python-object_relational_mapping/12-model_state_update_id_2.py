@@ -32,12 +32,15 @@ if __name__ == "__main__":
 
     # As per the requirement,
     # fetching the State object with id=2
-    state = session.get(State, {"id" : 2})
+    state = (
+        session.query(State)
+        .filter(State.id == 2)
+        .first()
+    )
 
     if state is not None:
         state.name = "New Mexico"
         session.commit()
-        print("Comitted")
     else:
         print("State not found")
 
