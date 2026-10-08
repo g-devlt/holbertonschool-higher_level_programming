@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     # As per the requirement,
     # fetching the State object with id=2
-    state = session.query(State).get(2)
+    state = session.get(State, 2)
 
     if state is not None:
         state.name = "New Mexico"
