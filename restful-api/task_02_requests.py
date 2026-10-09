@@ -36,7 +36,7 @@ def fetch_and_save_posts():
         posts = response.json()
         with open('posts.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['ID', 'Title', 'Body'])
+            writer.writerow(['id', 'title', 'body'])
             for post in posts:
                 writer.writerow([post['id'], post['title'], post['body']])
 
