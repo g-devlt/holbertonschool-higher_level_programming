@@ -24,7 +24,7 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            self.wfile.write(b'{"status": "OK", "message": "Endpoint not found"}')
+            self.wfile.write(b'{"status": "FAIL", "message": "Endpoint not found"}')
 
 if __name__ == "__main__":
     server_address = ('localhost', 8000)
